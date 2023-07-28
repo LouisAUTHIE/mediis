@@ -4,6 +4,10 @@
     <title>Mediis Studio</title>
     <link rel="stylesheet" href="dist/css/index.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dist/js/script.js"></script>
+    <!-- Set the viewport width to the device width and disable zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
   <body>
     <header>
@@ -13,7 +17,9 @@
             <span id="head_subtitle">Graphics x Movies</span>
           </div>
           <div id="menu">
+            <span id="click_menu_mobile"><i class="fas fa-bars"></i></span>
             <nav>
+              <div id="exit_menu_mobile"><div class="x-cross"></div></div>
               <ul>
                 <li class="menu_item">Nos réalisations</li>
                 <li class="menu_item">Le studio</li>
@@ -154,6 +160,7 @@
             <h2>et artisans de l'image</h2>
             <p>Quelques mots pour nous définir : élégance, sobriété, créatité, sincérité et beauté au naturel.</p>
           </div>
+          <div id="equipe_mobile"></div>
         </div>
         
       </div>
@@ -166,10 +173,58 @@
     </main>
     <footer>
       <div>
-        <div>
-          <h3>Contact</h3>
+        <div id="contact">
+          <h3>Contact</h3><br/><br/>
+          <p>
+            <b>Nelly</b> Gibert<br/>
+            Graphiste<br/>
+            <b>06 88 47 21 72</b>
+          </p>
+
+          <p>
+            <b>Florent</b> Vidalon<br/>
+            Graphiste vidéaste<br/>
+            <b>06 77 13 07 88</b>
+          </p>
+          
+          <p>
+            Mediis Studio<br/>
+            8 chemin des Bergers<br/>
+            65130 Esparros  
+          </p>
+          <br/><br/><br/>
+          <div><small>Mentions légales</small><br/>&copy; Mediis 2023</div>
         </div>
-        <div></div>
+        <div id="nous_ecrire">
+          <h3>Nos écrire</h3><br/><br/>
+          <form action="" method="POST">
+            <div>
+              <label for="nom">Nom / Prénom</label>
+              <input type="text" id="nom" name="nom"/>
+            </div>
+            <div>
+              <label for="tel">Téléphone</label>
+              <input type="phone" id="tel" name="tel"/>
+            </div>
+            <div>
+              <label for="message">Votre message</label>
+            <textarea id="message" name="message"></textarea>
+            </div>
+            <div>
+              <input type="submit" class="submit" value="Envoyer"/>
+            </div>
+            
+          </form>
+        </div>
+        <div id="social_content">
+          <ul>
+            <li class="social vimeo"><i class="fab fa-vimeo-v"></i></li>
+            <li class="social"><i class="fab fa-instagram"></i></li>
+            <li class="social"><i class="fab fa-facebook-f"></i></li>
+
+            <li class="txt_suivre">Nous suivre &gt; &gt; &gt;</li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
