@@ -9,7 +9,7 @@ $largeur_container: 1200px;
         justify-content: center;
         margin-top: 20px;
         li{
-            padding: 0px 20px;
+            padding: 0px 30px;
             position: relative;
             text-align: center;
             color: $color_text;
@@ -21,7 +21,7 @@ $largeur_container: 1200px;
                 background-color: $color_text;
                 position: absolute;
                 right: 0px;
-                top:8px;
+                top:2px;
             }
         }
     }
@@ -44,9 +44,10 @@ $largeur_container: 1200px;
 }
 
 *{
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-weight:300;
-    letter-spacing: -1px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:100;
+    letter-spacing: 0px;
+    font-size: 14px;
 }
 
 
@@ -69,26 +70,8 @@ header{
         padding: 40px 30px;
         #logo{
             max-width: 300px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            #head{
-                strong{
-                    font-weight: 500;
-                    letter-spacing: -2px;
-                }
-                font-weight: 400;
-                font-size: 1.4rem;
-                letter-spacing: -1px;
-            }
-            #head_subtitle{
-                font-size: 0.6rem;
-                font-weight: 300;
-                text-transform: uppercase;
-                font-weight: 500;
-                letter-spacing: 0px;
-                
+            img{
+                width: 200px;
             }
         }
         #menu{
@@ -100,6 +83,9 @@ header{
                     display: flex;
                     justify-content: space-between;
                     li{
+                        &.social::after{
+                            display: none;
+                        }
                         &:not(.social)::after{
                             content: "";
                             display: block;
@@ -108,7 +94,7 @@ header{
                             background-color: black;
                             position: absolute;
                             right: 0px;
-                            top:6px;
+                            top:2px;
                         }
                         &.social.vimeo{
                             margin-left: 30px;
@@ -218,28 +204,40 @@ main{
             height: calc(100vw * 0.5625); /* Ratio 16:9 pour une largeur d'écran */
             top: calc(50% - (100vw * 0.5625) / 2);
         }
+        #play_pause{
+            position: absolute;
+            top:0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255, 0);
+        }
     }
 
     #slogan{
         display: flex;
         justify-content: center;
+        padding: 30px 0px;
         &>div{
             width: $largeur_container;
             margin: 30px auto;
             text-align: center;;
             h1{
                 font-weight: 300;
-                letter-spacing: -2px;
+                font-size: 2.5rem;
+                letter-spacing: 0px;
                 strong{
                     font-weight: 500;
-                    letter-spacing: -2px;
+                    font-size: 2.5rem;
+                    letter-spacing: 0px;
                 }
                 margin-bottom: 0px;
             }
             p{
-                font-size: 0.8rem;
-                font-weight: 300;
-                margin-top: 0px;;
+                font-size: 0.95rem;
+                font-weight: 100;
+                margin-top: 5px;
+                line-height: 1.3;
             }
 
             @include list_bars();
@@ -262,6 +260,7 @@ main{
         flex-direction: column;
         justify-content: center;
         overflow: hidden;
+        padding-top: 30px;
         #realisations_upper{
             width: $largeur_container;
             margin: auto;
@@ -273,11 +272,15 @@ main{
 
             h2{
                 font-weight: 500;
-                letter-spacing: -2px;
                 margin-bottom: 0px;
                 font-size: 2rem;
             }
+
             @include list_bars(white);
+
+            ul>li{
+                font-size: 0.9rem;
+            }
         }
 
         #listing_realisations{
@@ -333,16 +336,18 @@ main{
                 &>div{
                     position: absolute;
                     display: none;
-                    width: $cote_cadre - 40px;
+                    width: $cote_cadre - 20px;
                     background-color: rgba(255,255,255, 0.9);
                     text-align: center;
-                    height: $cote_cadre - 40px;
+                    height: $cote_cadre - 20px;
                     box-sizing: border-box;
                     flex-direction: column;
                     justify-content: center;
+                    left:10px;
+                    top: 10px;
                     h3{
                         color: black;
-                        font-size: 1.8rem;
+                        font-size: 2rem;
                         font-weight: 500;
                         position: relative;
                         &::after{
@@ -386,7 +391,7 @@ main{
             height: 0.7 *  $largeur_container;
             background-repeat: no-repeat;
             background-image: url("../../img/studio_img.jpg");
-            margin: 30px auto 30px 50px;
+            margin: 60px auto 30px 50px;
             position: relative;
             overflow: visible;
             @include phone-only(){
@@ -414,7 +419,6 @@ main{
 
                 h3,h4{
                     font-weight: 500;
-                    letter-spacing: -2px;
                     margin-bottom: 0px;
                 }
                 h3{
@@ -429,7 +433,8 @@ main{
                 }
                 p{
                     margin-top: 5px;
-                    margin-bottom: 10px;
+                    margin-bottom: 0px;
+                    font-size: 0.95rem;
                 }
             }
         }
@@ -480,17 +485,17 @@ main{
                 }
                 b{
                     font-weight: 500;
-                    letter-spacing: 0px;
                     margin-bottom: 0px;
                 }
                 h2{
                     font-weight: 500;
-                    letter-spacing: -2px;
                     margin-bottom: 0px;
+                    font-size: 1.5rem;
                 }
                 p{
                     margin-top: 5px;
                     margin-bottom: 10px;
+                    font-size: 0.95rem;
                 }
             }
             &>div#equipe_mobile{
@@ -518,7 +523,7 @@ main{
         display: flex;
         width: 100%;
         position: relative;
-        padding: 40px 0px;
+        padding: 60px 0px;
         div{
             margin: auto;
             width: $largeur_container;
@@ -553,7 +558,7 @@ footer{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding: 40px 10px;
+    padding: 60px 10px;
     box-sizing: border-box;
     &>div{
         display: flex;
@@ -692,6 +697,7 @@ footer{
                         text-align: left;
                         width: 22px;
                         margin-top: 20px;
+                        font-weight: 700;
                         @include phone-only(){
                             display: none;
                         }

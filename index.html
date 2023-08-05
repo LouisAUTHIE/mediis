@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="dist/js/script.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <!-- Set the viewport width to the device width and disable zooming -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
@@ -14,8 +15,7 @@
     <header>
       <div class="container">
           <div id="logo">
-            <span id="head"><strong>Mediis</strong> Studio</span>
-            <span id="head_subtitle">Graphics x Movies</span>
+            <img src="img/logo_mediis.jpg"/>
           </div>
           <div id="menu">
             <span id="click_menu_mobile"><i class="fas fa-bars"></i></span>
@@ -36,7 +36,8 @@
     </header>
     <main>
       <div id="slider">
-        <iframe src="https://player.vimeo.com/video/474604726?h=1d811121f8&background=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen loop autoplay controls="0"></iframe>
+        <iframe id="video-player" src="https://player.vimeo.com/video/474604726?h=1d811121f8&background=1&autoplay=0" frameborder="0" allow="fullscreen" allowfullscreen loop controls="0"></iframe>
+        <div id="play_pause">&nbsp;</div>
       </div>
       <div id="slogan">
         <div>

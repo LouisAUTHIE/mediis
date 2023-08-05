@@ -20,4 +20,14 @@ $(document).ready(function() {
         menu.css('top', '');
         }
     });
+
+    // Select the iframe and create a new Vimeo player instance
+    const iframe = document.getElementById('video-player');
+    const player = new Vimeo.Player(iframe);
+    console.log(player);
+  
+    // Add an event listener to the iframe to play the video on click
+    document.getElementById('play_pause').addEventListener('click', () => {
+      player.play();
+    });
 });
